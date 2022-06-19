@@ -13,10 +13,10 @@ def generarlista(numero, path):
         milista = []
 
         for indice in range(1, numero + 1):
-                milista.append(str(random.randint(1, 20)))
+                milista.append(random.randint(1, 20))
 
         file = open(path, "a+")
-        file.writelines(milista)
+        file.writelines(str(milista))
         file.close()
 
         return milista
@@ -31,10 +31,10 @@ def listanumraiz(lista, path):
 
         for numero in lista:
 
-                listanueva.append(str(int(raiz(numero))))
+                listanueva.append(raiz(numero))
 
         file = open(path, "a+")
-        file.writelines(listanueva)
+        file.writelines("\n"+str(listanueva))
         file.close()
 
 
